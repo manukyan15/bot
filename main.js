@@ -1,5 +1,9 @@
 const TelegramBot = require('node-telegram-bot-api');
+const express = require('express')
+const app = express()
+const port = 18012;
 
+app.get('/', (req, res) => {
 const tokenOne = '7115844459:AAEN4CqFfEwRx9kPHdZS-bW7FeQlP8Jz754';
 const tokenTwo = '6768404903:AAG4YFMG9XvU_URnnv_DBEx0WDTQTlWUkxI';
 const tokenThre = '7034922701:AAE9LOHWJhBe0MqI6wZ7wXDGxCgPgjjsLQY';
@@ -220,3 +224,10 @@ botThre.on('callback_query', (callbackQuery) => {
         });
     }
 });
+
+          res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
