@@ -224,6 +224,10 @@ botThre.on('callback_query', (callbackQuery) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.send("Hello");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
