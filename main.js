@@ -224,8 +224,6 @@ botThre.on('callback_query', (callbackQuery) => {
     }
 });
 
-const TelegramBot = require('node-telegram-bot-api'); 
-
 const tokenFore = '7935393167:AAGm2MgowSZSo-zH2x3I8CsKmwXkSFPG0ds';
 
 const botFore = new TelegramBot(tokenFore, {polling: true});
